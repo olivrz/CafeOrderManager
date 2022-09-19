@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoffeeActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-38dp">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="104dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/quantity"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/coffeeTotalText"
+        android:layout_width="115dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="68dp"
+        android:text="$0.00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/quantityText" />
+
+    <EditText
+        android:id="@+id/quantityText"
+        android:layout_width="69dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="number"
+        android:onClick="updatePrice"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="149dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/coffee_total"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="87dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="108dp"
+        android:text="@string/add_ins"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <RadioGroup
+        android:id="@+id/sizeRGroup"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/shortRButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Short"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="54dp"
+            android:onClick="updatePrice"/>
+
+        <RadioButton
+            android:id="@+id/tallRButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tall"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="54dp"
+            android:onClick="updatePrice"/>
+
+        <RadioButton
+            android:id="@+id/grandeRButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/grande"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="54dp"
+            android:onClick="updatePrice"/>
+
+        <RadioButton
+            android:id="@+id/ventiRButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/venti"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="54dp"
+            android:onClick="updatePrice"/>
+    </RadioGroup>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="244dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/sizeRGroup">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="150dp">
+
+            <CheckBox
+                android:id="@+id/creamCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cream"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="150dp"
+                android:onClick="updatePrice"/>
+
+            <CheckBox
+                android:id="@+id/milkCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="updatePrice"
+                android:text="@string/milk"
+                tools:layout_editor_absoluteX="236dp"
+                tools:layout_editor_absoluteY="150dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="198dp">
+
+            <CheckBox
+                android:id="@+id/syrupCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/syrup"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="198dp"
+                android:onClick="updatePrice"/>
+
+            <CheckBox
+                android:id="@+id/whippedCreamCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/whipped_cream"
+                tools:layout_editor_absoluteX="236dp"
+                tools:layout_editor_absoluteY="198dp"
+                android:onClick="updatePrice"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="151dp"
+            tools:layout_editor_absoluteY="246dp">
+
+            <CheckBox
+                android:id="@+id/caramelCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caramel"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="246dp"
+                android:onClick="updatePrice"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/size"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/coffeeOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#3F51B5"
+        android:text="@string/add_to_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ProjectFive</string>
+    <string name="quantity">QUANTITY:</string>
+    <string name="coffee_total">COFFEE TOTAL:</string>
+    <string name="add_ins">ADD-INS:</string>
+    <string name="Short">Short</string>
+    <string name="tall">Tall</string>
+    <string name="grande">Grande</string>
+    <string name="venti">Venti</string>
+    <string name="cream">Cream</string>
+    <string name="syrup">Syrup</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="caramel">Caramel</string>
+    <string name="size">SIZE:</string>
+    <string name="add_to_order">ADD TO ORDER</string>
+    <string name="milk">Milk</string>
+    <string name="items">ITEMS</string>
+    <string name="subtotal">SUBTOTAL:</string>
+    <string name="_0_00">$0.00</string>
+    <string name="sales_tax">SALES TAX:</string>
+    <string name="total">TOTAL:</string>
+    <string name="place_order">PLACE ORDER</string>
+    <string name="remove_item">REMOVE ITEM</string>
+
+</resources>
